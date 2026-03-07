@@ -6,8 +6,8 @@ return {
       opts = {
         registries = {
           "github:nvim-java/mason-registry",
+          "github:Crashdummyy/mason-registry",
           "github:mason-org/mason-registry",
-          "file:/home/chonky/.config/nvim/mason",
         },
       },
       config = function(opts)

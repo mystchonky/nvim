@@ -1,5 +1,7 @@
+local group = vim.api.nvim_create_augroup("UserLspConfig", {})
+
 vim.api.nvim_create_autocmd("LspAttach", {
-  group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+  group = group,
   callback = function(event)
     -- Enable completion triggered by <c-x><c-o>
     vim.bo[event.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
@@ -24,3 +26,17 @@ vim.api.nvim_create_autocmd("LspAttach", {
     -- end, opts)
   end,
 })
+
+-- vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+--   group = group,
+--   callback = function()
+--     vim.lsp.buf.document_highlight()
+--   end,
+-- })
+
+-- vim.api.nvim_create_autocmd("CursorMoved", {
+--   group = group,
+--   callback = function()
+--     vim.lsp.buf.clear_references()
+--   end,
+-- })

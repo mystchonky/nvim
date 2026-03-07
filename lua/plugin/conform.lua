@@ -7,6 +7,9 @@ return {
         lua = { "stylua" },
         rust = { "rustfmt" },
         cpp = { "clang-format" },
+        html = { "prettierd" },
+        javascript = { "prettierd" },
+
         -- qml = { "qmlformat" },
         -- toml = { "taplo" },
       },

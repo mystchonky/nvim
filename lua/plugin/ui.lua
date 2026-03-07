@@ -31,10 +31,7 @@ return {
       },
     },
   },
-  {
-    "m-demare/hlargs.nvim",
-    config = true,
-  },
+
   {
     "j-hui/fidget.nvim",
     event = "LspAttach",
@@ -80,13 +77,6 @@ return {
     main = "ibl",
   },
   {
-    "luozhiya/lsp-virtual-improved.nvim",
-    event = { "LspAttach" },
-    config = function()
-      require("lsp-virtual-improved").setup()
-    end,
-  },
-  {
     "luukvbaal/statuscol.nvim",
     opts = function()
       local builtin = require("statuscol.builtin")
@@ -119,24 +109,6 @@ return {
   },
   {
     "stevearc/dressing.nvim",
-    opts = {},
-  },
-  {
-    "RRethy/vim-illuminate",
-    event = "VeryLazy",
-    config = function()
-      require("illuminate").configure({
-        delay = 200,
-        large_file_cutoff = 2000,
-        large_file_overrides = {
-          providers = { "lsp" },
-        },
-      })
-    end,
-  },
-  {
-    "chrisgrieser/nvim-lsp-endhints",
-    event = "LspAttach",
     opts = {},
   },
 }

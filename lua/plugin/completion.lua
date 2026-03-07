@@ -9,6 +9,7 @@ return {
     "hrsh7th/cmp-nvim-lua",
     "hrsh7th/cmp-path",
     "echasnovski/mini.icons",
+    "folke/lazydev.nvim",
   },
   opts = function()
     vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })

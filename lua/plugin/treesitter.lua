@@ -4,7 +4,6 @@ return {
   build = ":TSUpdate",
   dependencies = {
     "neovim/nvim-lspconfig",
-    "m-demare/hlargs.nvim",
   },
   opts = {
     highlight = {
@@ -15,4 +14,3 @@ return {
     require("nvim-treesitter.configs").setup(opts)
   end,
 }
-
